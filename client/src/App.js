@@ -15,8 +15,8 @@ class App extends React.Component {
 axios //get our API data
   .get("http://localhost:5000/api/players")
   .then(response => {
-    // console.log(response);
-  this.setState(response.data)
+    // console.log(response.data);
+  this.setState({ data: response.data })
   })
   .catch(err => console.error(err));
 }
@@ -33,8 +33,5 @@ axios //get our API data
   );
 }
 }
-
-
-
 
 export default App;
