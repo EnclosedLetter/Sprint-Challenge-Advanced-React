@@ -11,8 +11,8 @@ class App extends React.Component {
     data: [] 
     };
   }
-  componentDidMount(){ //this is basically useEffect, it's going to run once, once the app first loads
-// this is where we will fetch our API data  
+  componentDidMount(){ //this is similar to useEffect, it's going to run once, once the app first loads
+// this is where we will fetch our API data
 axios //get our API data
   .get("http://localhost:5000/api/players")
   .then(response => {

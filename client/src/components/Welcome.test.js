@@ -11,14 +11,3 @@ test("Welcome message is there", () => {
   // Assert
   expect(welcome).toBeInTheDocument();
 });
-
-
-//  test("renders greeting on Greeting component", () => {
-//     //Arrange 
-//      const { getByText } = render(<Welcome />);
-//    // Act
-//    const welcome = getByText(/Welcome to my dummy component!/i);
-//    // Assert
-//    expect(welcome).toBeInTheDocument();
-//  });
- 
