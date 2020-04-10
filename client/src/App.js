@@ -2,6 +2,7 @@ import React from 'react';
 // import "./styles.css";
 import axios from "axios";
 import SoccerPlayers from "./components/SoccerPlayers"
+import SearchForm from "./components/SearchForm"
 
 class App extends React.Component { 
   constructor (){
@@ -19,6 +20,14 @@ axios //get our API data
   this.setState({ data: response.data })
   })
   .catch(err => console.error(err));
+}
+
+handleSearch = input => { //this will handle text put into the text box
+  this.setState({
+    data: this.state.data.filter(item =>{
+      return item.name.toLowerCase().includes(input);
+    })
+  })
 }
 
   render(){ //have to call the render method that comes with from React.Component

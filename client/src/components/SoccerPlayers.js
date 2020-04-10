@@ -1,5 +1,7 @@
 import React from "react";
 
+//props for
+
 export function SoccerPlayers(props){
     console.log(props);
     return (
