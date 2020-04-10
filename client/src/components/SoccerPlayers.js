@@ -4,7 +4,9 @@ export function SoccerPlayers(props){
     console.log(props);
     return (
         <div>
-            <h2> Names: {props.user.country} </h2>
+            <h1> Names: {props.user.name} </h1>
+            <h1> Country: {props.user.country} </h1>
+            <h1> Searches: {props.user.searches} </h1>
         </div>
     );
 }

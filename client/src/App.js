@@ -25,7 +25,7 @@ axios //get our API data
     console.log(this.state)
   return (
     <div className="App">
-      <h1>Rendered</h1>
+      <h1>Meet The Players!</h1>
       {this.state.data.map(item => {
         return <SoccerPlayers user={item} /> /*for each object we will be calling user*/
       })} {/*This will help us get to our response.data array*/}
