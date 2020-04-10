@@ -1,29 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "../hooks/useForm";
+// import { useDarkMode } from "../hooks/useDarkMode";
 
-export function SearchForm(props){
-    const [darkMode, setDarkMode] = useDarkMode("isDark")
-    const toggleMode = e => {
-        e.preventDefault();
-        detDarkMode(!darkMode)
-    };
 
-    const [form, handleChange] = useform();
-    const handleSubmit = e => {
-        e.preventDefault();
-        props.handleSearch(form.search);
-    };
+export function SearchForm(props) {
+  // const [darkMode, setDarkMode] = useDarkMode("isDark");
+  // const toggleMode = e => {
+  //   e.preventDefault();
+  //   setDarkMode(!darkMode);
+  // };
 
-    return ( 
-        <form onSubmit={handleSubmit}>
-        <div onClick={toggleMode}>CLICK ME!!</div>
-        <input 
+  const [form, handleChange] = useForm();
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.handleSearch(form.search);
+  };
+  
+  return (
+    <form onSubmit={handleSubmit}>
+      {/* <div onClick={toggleMode}>DarkMode</div> */}
+      <input
         name="search"
-        placeholder="Search For Player"
+        placeholder="Search"
         onChange={handleChange}
         value={form.search}
-        />
-        <button type="submit"> START SEARCH </button>
-        </form>
-    )
+      />
+      
+      <button type="submit">Submit</button>
+    </form>
+  );
 }
+
+export default SearchForm;

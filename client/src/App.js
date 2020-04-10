@@ -35,6 +35,7 @@ handleSearch = input => { //this will handle text put into the text box
   return (
     <div className="App">
       <h1>Meet The Players!</h1>
+      < SearchForm handleSearch={this.handleSearch} />
       {this.state.data.map(item => {
         return <SoccerPlayers user={item} /> /*for each object we will be calling user*/
       })} {/*This will help us get to our response.data array*/}
